@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <style>
+    .profile-box {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 0 10px #ccc;
+    }
+    .profile-box img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+        background: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .profile-container {
+        position: relative;
+    }
+
+    .profile-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #ddd;
+    }
+
+    .profile-menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 55px;
+        width: 190px;
+        background: white;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .profile-menu p {
+        margin: 4px 0;
+    }
+
+    .name {
+        font-weight: bold;
+        color: #222;
+    }
+
+    .email {
+        font-size: 14px;
+        color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="profile-box">
+  <img id="userPhoto" src="" alt="Profile Photo">
+  <h2 id="userName"></h2>
+  <p><b>Email:</b> <span id="userEmail"></span></p>
+  <p><b>Phone:</b> <span id="userPhone"></span></p>
+  <p><b>Username:</b> <span id="userUsername"></span></p>
+
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+async function loadProfile() {
+  const token = localStorage.getItem("token");
+
+  if (!token) window.location.href = "profile.html";
+
+  const res = await fetch("http://localhost:5000/api/auth/profile", {
+    method: "GET",
+    headers: { "Authorization": token }
+  });
+
+  const user = await res.json();
+
+  document.getElementById("userPhoto").src = user.photo;
+  document.getElementById("userName").innerText = user.fullName;
+  document.getElementById("userEmail").innerText = user.email;
+  document.getElementById("userPhone").innerText = user.phone;
+  document.getElementById("userUsername").innerText = user.username;
+}
+
+loadProfile();
+
+function logout() {
+  localStorage.removeItem("token");
+  window.location.href = "profile.html";
+}
+</script>
+
+</body>
+</html> 
+ -->

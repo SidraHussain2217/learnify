@@ -1,0 +1,95 @@
+/* GLOBAL STYLING */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #7f53ac 0%, #647dee 100%),
+              url('https://i.pinimg.com/1200x/2d/c9/0e/2dc90e7d4af9296805d31916841f677d.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* REGISTER BOX */
+.register-box {
+  width: 380px;
+  background: rgba(33, 33, 114, 0.28);
+  border-radius: 18px;
+  padding: 40px 35px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(67, 68, 181, 0.28);
+}
+
+.register-box h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* INPUT */
+.input-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.input-group .icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1em;
+  color: #a996ef;
+}
+
+/* BUTTON */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 40px;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  background: #fff;
+  color: #8048c4;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: .25s;
+  box-shadow: 0 1px 6px rgba(125, 89, 225, 0.14);
+}
+
+.register-btn:hover {
+  background: #ede0ff;
+  color: #5130a7;
+}
+
+/* LOGIN LINK */
+.login-link {
+  margin-top: 15px;
+  font-size: 0.95em;
+}
+
+.login-link a {
+  color: #ffc4ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
